@@ -4,7 +4,8 @@
 
 ```
 research-wiki/
-├── CLAUDE.md          # Schema：告诉 LLM 如何维护 Wiki
+├── .codebuddy/
+│   └── CODEBUDDY.md   # Schema：告诉 LLM 如何维护 Wiki
 ├── raw/               # 原始资料（不可变，只进不改）
 │   ├── papers/        # PDF 论文
 │   ├── articles/      # Markdown/Web 文章
@@ -41,3 +42,9 @@ research-wiki/
 1. 扫描所有 Wiki 页面，查找矛盾、过时声明、孤立页面
 2. 自动修复能发现的问题
 3. 追加 `wiki/log.md`
+
+## 规范
+
+- Wiki 更新由用户主导策划，AI 执行写入，不能越俎代庖直接修改
+- 操作日志只追加，不修改历史记录
+- raw/ 目录只进不改，不可删除或修改原始资料
