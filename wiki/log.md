@@ -1,66 +1,51 @@
 # 操作日志
 
-## [2026-06-10] init | 初始化 research-wiki 知识库
-- 创建目录结构
-- 初始化 git 仓库
+## [2026-06-16] lint | 全库健康检查
 
-## [2026-06-10] ingest | 摄入谢志峰芯片访谈
-- 来源：云锋基金微信公众号 (2021-03-03)
-- 原始资料: `raw/articles/xiezhifeng-china-chip-2021.md`
-- 新建页面:
-  - `wiki/papers/xiezhifeng-china-chip-2021.md` — 文章摘要
-  - `wiki/entities/xie-zhifeng.md` — 谢志峰人物页
-  - `wiki/concepts/china-semiconductor.md` — 中国半导体产业
-  - `wiki/concepts/semiconductor-business-models.md` — 半导体商业模式
-  - `wiki/concepts/compound-semiconductors.md` — 化合物半导体
-- 更新: `wiki/index.md`, `wiki/overview.md`
+**自动修复项**：
+- 修复 6 处孤立 Wikilink：`[[ASML]]`→`[[阿斯麦]]`、`[[EUV光刻]]`→`[[光刻机]]`、`[[RCA技术引进]]`→`[[CMOS技术]]`、`[[台湾半导体发展]]`→`[[中国半导体突围]]`、`[[AI芯片]]`→标记待创建
+- 修复 4 个 synthesis 页面的 `wiki/papers/xxx.md` 路径引用为 `[[...]]` 格式
+- 修复 `entities/xie-zhifeng.md` 的相对路径引用
+- 补全 index.md 遗漏的 10 页索引（英文版实体页 2 个 + 英文版概念页 6 个 + synthesis 3 个）
+- 更新 index.md 统计（36→49）、overview.md 统计（33→49）
 
-## [2026-06-10] query | 半导体中国突围的可能局面
-- 问题: 半导体中国突围有可能做成什么样的局面？
-- 综合来源: `wiki/papers/xiezhifeng-china-chip-2021.md`, `wiki/concepts/china-semiconductor.md`, `wiki/concepts/semiconductor-business-models.md`, `wiki/concepts/compound-semiconductors.md`
-- 产物: `wiki/synthesis/china-chip-breakthrough-scenarios.md`
-- 更新: `wiki/index.md`
+**需人工判断项**：
+1. **5 组双语冗余**：`tsmc.md`/`台积电.md`、`xie-zhifeng.md`/`谢志峰.md`、`semiconductor-cycle.md`/`半导体周期.md`、`optical-chips.md`/`光芯片.md`、`china-semiconductor.md`/`中国半导体突围.md` — 内容不完全一致，需决定保留策略
+2. **DRAM 存储寡头数据矛盾**：2021 版称四家（含东芝），2026 版称三家（不含东芝）— 需确认
+3. **国家大基金一期数字矛盾**：1000 亿 vs 1400 亿（可能统计口径不同）
+4. **"英特尔技术领先两代"来自单一来源（谢志峰）**，在 3 个文件中重复传播
 
-## [2026-06-10] ingest | 摄入谢志峰2026播客
-- 来源：小宇宙播客"永庆对话谢志峰" / 海畔铠甲录整理 (2026-06-02)
-- 原始资料: `raw/articles/xiezhifeng-podcast-2026.md`
-- 新建页面:
-  - `wiki/papers/xiezhifeng-podcast-2026.md` — 播客总结
-  - `wiki/concepts/semiconductor-cycle.md` — 半导体周期消失 + 摩尔定律永生
-  - `wiki/concepts/optical-chips.md` — 光芯片/OCS
-- 更新页面:
-  - `wiki/entities/xie-zhifeng.md` — 新增2026观点、投资框架、AI判断
-  - `wiki/concepts/china-semiconductor.md` — 中美博弈、工业软件破局、产业链排名更新
-  - `wiki/concepts/semiconductor-business-models.md` — 台积电三条壁垒、英特尔翻转、存储寡头逻辑
-  - `wiki/index.md`, `wiki/overview.md`
+## [2026-06-16] synthesis | 台积电崛起三部曲总结
 
-## [2026-06-10] query | 谢志峰观点演变：2021 vs 2026
-- 问题: 对比谢志峰两次访谈，哪些观点变化、哪些不变？
-- 综合来源: `wiki/papers/xiezhifeng-china-chip-2021.md`, `wiki/papers/xiezhifeng-podcast-2026.md`, `wiki/entities/xie-zhifeng.md`
-- 产物: `wiki/synthesis/xiezhifeng-view-evolution-2021-2026.md`
-- 更新: `wiki/index.md`
+在用户主导下，创建台积电三部曲的综合分析页（`synthesis/台积电崛起三部曲总结.md`），从三个层面梳理：
+1. **历史进程** — 1968-1994 完整时间线，从台湾半导体起源到台积电上市
+2. **商业模式** — 三块拼图、能力圈评估、客户三原则、创新与壁垒
+3. **人物弧光** — 张忠谋从工程师→技术人→政治人→企业家的三次蜕变
 
-## [2026-06-16] ingest | 摄入台积电崛起三部曲
-- 来源：苔藓花园播客 / 孤独的园丁 (2026-04~05)
-- 原始资料: `raw/articles/tsmc-rise-1~3*.md`
-- 新建页面:
-  - `wiki/papers/tsmc-rise-trilogy-2026.md` — 三部曲总结
-  - `wiki/entities/tsmc.md` — 台积电企业实体页
-  - `wiki/concepts/tsmc-foundry-model.md` — 晶圆代工模式深度分析
-- 更新: `wiki/index.md`, `wiki/overview.md`
+同时新增概念页 `concepts/tsmc-foundry-model.md`（用户撰写），更新 index.md。
 
-## [2026-06-16] synthesize | 半导体产业思维模型
-- 从已有资料中提取10个可复用的思考框架
-- 新建: `wiki/concepts/mental-models.md`
-- 涵盖: 三块拼图、聚焦长板、客户信任、第一性原理、政治决定战略、诉之以利益、反周期投资、临界规模、即时激励、与命运约会
-- 更新: `wiki/index.md`
+**触及页面**：+2（1 synthesis + 1 concept）
 
-## [2026-06-16] re-ingest | 基于完整原文重写所有文章页
-- 5篇文章页全部重写，保留原文叙事脉络、对话细节和人物故事
-- 更新: `wiki/index.md`
+## [2026-06-16] ingest | 第一批 5 篇资料摄入
 
-## [2026-06-16] query | 两种视角下的台积电：苔藓花园 vs 谢志峰
-- 问题: 对比两种来源对TSMC认知的区别
-- 产物: `wiki/synthesis/tsmc-two-perspectives.md`
-- 核心发现: 苔藓花园是史诗叙事（怎么来的），谢志峰是实战分析（凭什么赢）；共同结论是TSMC的护城河非技术而是时间×信任的复利
-- 更新: `wiki/index.md`
+从 `raw/articles/` 摄入 5 篇文章：
+
+1. **台积电崛起（1）中国台湾的世纪豪赌** — 台湾半导体起源：小欣欣豆浆店会议、RCA 技术引进、CMOS 路线、联电诞生
+2. **台积电崛起（2）改革工研院和擘画台积电** — Morris 的三大改革与失败、专业晶圆代工三块拼图、与陈履安博弈
+3. **台积电崛起（3）创业台积电** — 飞利浦投资、英特尔敲门、阿斯麦结缘、ICIC 文化、飞利浦控制权博弈
+4. **对话谢志峰：芯片行业 20 年磨一剑（2021）** — 全产业链闭合、投入不足、人才缺口、IDM 缺失
+5. **谢志峰：半导体周期已消失（2026）** — 周期消失论、三赛道五股票、存储/光芯片缺口、AI 重塑芯片行业
+
+**操作**：
+- 创建 3 篇论文摘要页（papers/）
+- 创建 14 个实体页（entities/）：台积电、张忠谋、谢志峰、中芯国际、英特尔、飞利浦、阿斯麦、联华电子、工研院、李国鼎、潘文渊、孙运璇、德州仪器、陈履安
+- 创建 14 个概念页（concepts/）：晶圆代工、CMOS、Fabless、IDM、CIDM、摩尔定律、半导体周期、先进制程、封装测试、DRAM、光刻机、光芯片、ICIC 文化、中国半导体突围
+- 创建 2 篇综合分析（synthesis/）：台积电商业模式解析、中国半导体突围路径
+- 更新 index.md、overview.md
+
+**触及页面**：33 页（3 papers + 14 entities + 14 concepts + 2 synthesis）
+
+## [2026-06-16] init | 初始化半导体产业知识库
+创建目录结构、WIKI-SCHEMA.md、index.md、overview.md。
+主题：半导体产业（技术、产业链、政策、中国突围路径）。
+准备进入 ingest-query 循环。

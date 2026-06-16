@@ -33,6 +33,6 @@
 3. **AI是最大变量**：2021只字未提，2026后半段全在讲AI——威胁（消灭设计公司）、工具（数字分身）、目标（干掉英伟达）
 
 ## 参考
-- `wiki/papers/xiezhifeng-china-chip-2021.md`
-- `wiki/papers/xiezhifeng-podcast-2026.md`
-- `wiki/entities/xie-zhifeng.md`
+- [[谢志峰_2021_芯片行业破局]]
+- [[谢志峰_2026_半导体周期与投资]]
+- [[谢志峰]]

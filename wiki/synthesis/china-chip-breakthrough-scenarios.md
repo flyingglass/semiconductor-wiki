@@ -32,7 +32,7 @@
 - 时间纪律：10 年打基础，20 年见成效
 
 ## 参考
-- `wiki/papers/xiezhifeng-china-chip-2021.md`
-- `wiki/concepts/china-semiconductor.md`
-- `wiki/concepts/semiconductor-business-models.md`
-- `wiki/concepts/compound-semiconductors.md`
+- [[谢志峰_2021_芯片行业破局]]
+- [[中国半导体突围]]
+- [[CIDM模式]]
+- [[半导体周期]]

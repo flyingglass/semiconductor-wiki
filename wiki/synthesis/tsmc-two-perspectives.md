@@ -49,5 +49,5 @@
 ---
 
 ## 参考
-- `wiki/papers/tsmc-rise-trilogy-2026.md`
-- `wiki/papers/xiezhifeng-podcast-2026.md`
+- [[苔藓花园_2026_台积电崛起三部曲]]
+- [[谢志峰_2026_半导体周期与投资]]
