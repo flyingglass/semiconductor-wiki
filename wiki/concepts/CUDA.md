@@ -36,7 +36,7 @@ Compute Unified Device Architecture，英伟达的并行计算平台和编程模
 
 - [[GPU]]
 - [[深度学习]]
-- [[加速计算]]
+- [[黄氏定律]]
 
 ## 笔记
 

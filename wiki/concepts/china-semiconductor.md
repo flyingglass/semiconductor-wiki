@@ -51,10 +51,10 @@
 - 杀手锏方向：化合物半导体材料（SiC/GaN）、SOI材料、工业软件
 
 ## 相关概念
-- [半导体商业模式](semiconductor-business-models.md)
-- [化合物半导体](compound-semiconductors.md)
-- [半导体周期](semiconductor-cycle.md)
-- [光芯片](optical-chips.md)
+- [[semiconductor-business-models]]
+- [[compound-semiconductors]]
+- [[semiconductor-cycle]]
+- [[optical-chips]]
 
 ## 参考来源
 - 云锋基金：对话谢志峰 (2021-03-03)
